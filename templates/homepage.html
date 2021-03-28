@@ -1,0 +1,92 @@
+<html>    
+<head>    
+    <title>HOME PAGE</title>    
+   <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">    -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>    
+<body style="color:black; background-color:pink">
+
+
+  <h3><p style="color:blue;" align='center'>Customer Transaction Details </p> </h3>
+ <div class="homeclass"> 
+<form class="homeform" name="home" id="login" method="get" action="#" "> 
+
+	<div class="container" align="right">
+	<a href="/"><h2>Logout</h2></a>
+	</div>
+	<div class="container" align="right">  
+		<span class="psw" > <a href="https://public.tableau.com/views/CustomerEngagementAnalysis/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link" style="color:red;"><h3>Customer Engagement Dashboard</h3></a></span>
+	</div>
+</form>
+ {% if insertmsg %}
+    <p>{{ insertmsg }} {{tablename}}</p>
+    {% endif %}
+	{% if errmsg %}
+    <h3><p style="color:red;">{{ errmsg }}</p></h3>
+    {% endif %}
+		<h4> <p  align="left" style="color:black;">  Upload csv files here to insert data. Allowed filenames households.csv or transactions.csv or products.csv </p> </h4>
+<form action = "/insertdata" method = "POST" 
+         enctype = "multipart/form-data" align='left'>
+		
+         <input type = "file" name = "file" />
+         <input type = "submit" value="Upload"/>
+      </form>
+ <h3><p align="center"> Enter household number to fetch transaction details </p> </h3>
+ <form align="center" class="example" action="/getrows" method = "GET">
+  <input type="search" name="search" id="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+  <h3> <p style="color:blue;" align="left"> Transaction details for Household :</p></h3>
+  <table border="1">
+  <tr>
+    <th>HSHD NUM</th>
+    <th>BASKET NUM</th>
+	<th>PRODUCT NUM</th>
+    <th>PURCHASE</th>
+	<th>DEPARTMENT</th>
+    <th>COMMODITY</th>
+    <th>SPEND</th>
+    <th>UNITS</th>
+    <th>STORE_R</th>
+    <th>WEEK NUM</th>
+    <th>YEAR</th>
+    <th>LOYALTY</th>
+    <th>AGE RANGE</th>
+    <th>MARITAL STATUS</th>
+	<th>INCOME RANGE</th>
+    <th>HOME OWNER</th>
+    <th>HSHD COMPOSITION</th>
+    <th>HSHD SIZE</th>
+    <th>CHILDREN</th>
+  </tr>
+  
+  {% for row in hshddata%}
+  <tr>
+  <td> {{ row.0}} </td>
+  <td> {{ row.1}} </td>
+  <td> {{ row.2}} </td>
+  <td> {{ row.3}} </td>
+  <td> {{ row.4}} </td>
+  <td> {{ row.5}} </td>
+  <td> {{ row.6}} </td>
+  <td> {{ row.7}} </td>
+  <td> {{ row.8}} </td>
+  <td> {{ row.9}} </td>
+  <td> {{ row.10}} </td>
+  <td> {{ row.11}} </td>
+  <td> {{ row.12}} </td>
+  <td> {{ row.13}} </td>
+  <td> {{ row.14}} </td>
+  <td> {{ row.15}} </td>
+  <td> {{ row.16}} </td>
+  <td> {{ row.17}} </td>
+  <td> {{ row.18}} </td>
+  <td> {{ row.19}} </td>
+  </tr>
+  {% endfor %}
+  </table>
+</form>
+
+</div>
+</body>  
+</html>  

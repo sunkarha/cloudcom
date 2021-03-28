@@ -1,0 +1,48 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>REGISTRATION PAGE</title>    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">    
+	
+</head>    
+<body>    
+    <h2>REGISTRATION PAGE</h2><br>    
+    <div class="signin">    
+    <form name="f1" id="signin" method="post" action="/addUser" onsubmit="return validate()">    
+	<div class="container">
+     {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}<br>
+	</div>
+      <label><b>FirstName    
+        </b>    
+        </label>    
+        <input type="text" name="Fname" id="Fname" placeholder="Enter FirstName">		
+        <br><br>   
+		<label><b>LastName    
+        </b>    
+        </label>    
+        <input type="text" name="Lname" id="Lname" placeholder="Enter LastName">		
+        <br><br>   
+		
+		<label><b>Email Id    
+        </b><br> 
+        </label>    
+        <input type="text" name="email" id="email" placeholder="Enter Email">		
+        <br><br> 
+		<label><b>UserName</b></label>
+          <input type="text" class="form-control" required name="username"  ><br><br>		
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input type="Password" name="Pass" id="Pass" placeholder="Enter Password">    
+        <br><br>    
+         <input type="submit" name="log" id="submit" value="Sign up">
+		 <br><br>    
+		  <center>  <p>Already a member? <a href="/">SignIn</a> </p> </center>
+        
+    </form>     
+</div>    
+</body>  
+ 
+</html>    
