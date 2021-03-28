@@ -1,0 +1,131 @@
+body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color:White;  
+    font-family: 'Arial';  
+}  
+.login,.signin,.homeclass{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: LightGray;  
+        border-radius: 15px ;  
+          
+}  
+.homeclass{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: white;  
+        border-radius: 15px ;  
+          
+}  
+#submit{  
+        background-color: DodgerBlue; /* Green */
+        border: none;
+        color: white;
+        padding: 5px;
+        width: 70%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 14px 40px;
+        cursor: pointer;  
+          
+}  
+
+h2{  
+    text-align: center;  
+	font-size: 250%; 
+    color: #277582;  
+    padding: 20px;  
+}  
+label{  
+    color: #277582;  
+    font-size: 17px;  
+}  
+p{
+	text-align: center; 
+}
+#Uname,#Pass,#Fname,#Lname,#email{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+
+
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+a{  
+    float: center-left;
+    color: DodgerBlue;    
+
+     
+}  
+
+form.homeform input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+
+
+form.homeform button {
+  float: center;
+  width: 50%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+.search input[type=text]{
+	padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+.search button[type=submit] {
+   
+  width: 20%;
+  
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+.search{  
+text-align: center;  
+width: 500px;  
+height: 200px;  
+padding-top: 10px;  
+padding-left: 450px;
+}  
+.container{  
+text-align: center;  
+width: 300px;  
+height: 200px;  
+padding-top: 50px;  
+}  
